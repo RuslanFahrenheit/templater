@@ -1,22 +1,22 @@
 'use strict';
 
-class templater {
+class Templater {
     run() {
-        this.find();
-        this.replace();
+        const tags = this.find();
+
+        this.replace(tags);
     }
 
     find() {
-        this.btnNodes = document.getElementsByTagName('bootstrap_button');
+        let btnNodes = document.getElementsByTagName('bootstrap_button');
+        return btnNodes;
     }
 
-    replace() {
-        let btnEl = this.btnNodes;
-
-        for (let i = btnEl.length; i--;) {
-            btnEl[i].outerHTML = '<button class="btn btn-default">Some Text</button>';
+    replace(tags) {
+        for (let i = tags.length; i--;) {
+            tags[i].outerHTML = '<button class="btn btn-default">Some Text</button>';
         }
     }
 }
 
-let Templater = new templater();
+let templater = new Templater();
