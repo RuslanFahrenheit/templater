@@ -2,21 +2,22 @@
 
 class Templater {
     constructor() {
-        this.tagsArray = {};
+        this.tags = {};
     }
 
     run() {
-        for (let tag in this.tagsArray) {
-            let elements = document.getElementsByTagName(tag);
+        for (let tag in this.tags) {
+            let nodes = document.getElementsByTagName(tag);
+            let elements = Array.from(nodes);
 
-            for (let i = 0; i < elements.length; i++) {
-                elements[0].outerHTML = this.tagsArray[tag];
-            }
+            elements.forEach(function(element) {
+                element.outerHTML = this.tags[tag];
+            }, this);
         }
     }
 
     addTag(tag, template) {
-        this.tagsArray[tag] = template;
+        this.tags[tag] = template;
     }
 }
 
