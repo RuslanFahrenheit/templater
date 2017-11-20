@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script type="text/javascript" src="templater.js"></script>
+</head>
+<body>
+	<bootstrap_button>Some Text</bootstrap_button>
+	<bootstrap_button>Some Text</bootstrap_button>
+	<bootstrap_link>Some Another Text</bootstrap_link>
+	<bootstrap_link>Some Another Text</bootstrap_link>
+	<bootstrap_button>Some Text</bootstrap_button>
+	<bootstrap_button>Some Text</bootstrap_button>
+	<bootstrap_link>Some Another Text</bootstrap_link>
+	<bootstrap_link>Some Another Text</bootstrap_link>
+	<bootstrap_button>Some Text</bootstrap_button>
+	<bootstrap_button>Some Text</bootstrap_button>
+	<bootstrap_link>Some Another Text</bootstrap_link>
+	<bootstrap_link>Some Another Text</bootstrap_link>
+
+	<script>
+        templater.addTag('bootstrap_button', '<button class="btn btn-default" type="submit">Some text</button>');
+        templater.addTag('bootstrap_link', '<a href="#">Some Another Text</a>');
+
+        templater.run();
+	</script>
+</body>
+</html>
