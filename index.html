@@ -22,9 +22,12 @@
 	<bootstrap_link>Some Another Text</bootstrap_link>
 	<bootstrap_link>Some Another Text</bootstrap_link>
 
+	<bootstrap_button class="btn btn-default some-class" type="submit">Button Text</bootstrap_button>
+
 	<script>
-        templater.addTag('bootstrap_button', '<button class="btn btn-default" type="submit">Some text</button>');
+        //templater.addTag('bootstrap_button', '<button class="btn btn-default" type="submit">Some text</button>');
         templater.addTag('bootstrap_link', '<a href="#">Some Another Text</a>');
+		templater.addTag('bootstrap_button', '<button class="{{class}}" type="{{type}}">' + '{{html}}' + '</button>');
 
         templater.run();
 	</script>
