@@ -1,35 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<script type="text/javascript" src="templater.js"></script>
 </head>
 <body>
-	<bootstrap_button>Some Text</bootstrap_button>
-	<bootstrap_button>Some Text</bootstrap_button>
 	<bootstrap_link>Some Another Text</bootstrap_link>
 	<bootstrap_link>Some Another Text</bootstrap_link>
-	<bootstrap_button>Some Text</bootstrap_button>
-	<bootstrap_button>Some Text</bootstrap_button>
 	<bootstrap_link>Some Another Text</bootstrap_link>
-	<bootstrap_link>Some Another Text</bootstrap_link>
-	<bootstrap_button>Some Text</bootstrap_button>
-	<bootstrap_button>Some Text</bootstrap_button>
-	<bootstrap_link>Some Another Text</bootstrap_link>
-	<bootstrap_link>Some Another Text</bootstrap_link>
+	<bootstrap_link>Some Another Text2</bootstrap_link>
 
 	<bootstrap_button class="btn btn-default some-class" type="submit">Button Text</bootstrap_button>
+	<bootstrap_button class="btn btn-default some-class" type="submit">Button Text 2</bootstrap_button>
+	<bootstrap_button class="btn btn-default some-class" type="submit">Oleh 3</bootstrap_button>
+	<bootstrap_button class="btn btn-default some-class" type="submit">Button Text 4</bootstrap_button>
 
 	<script>
-        //templater.addTag('bootstrap_button', '<button class="btn btn-default" type="submit">Some text</button>');
-        templater.addTag('bootstrap_link', '<a href="#">Some Another Text</a>');
+		templater.addTag('bootstrap_link', '<a href="#">' + '{{html}}' + '</a>');
 		templater.addTag('bootstrap_button', '<button class="{{class}}" type="{{type}}">' + '{{html}}' + '</button>');
 
-        templater.run();
+		templater.run();
 	</script>
 </body>
 </html>

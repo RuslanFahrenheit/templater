@@ -29,7 +29,7 @@ class Templater {
             if (attr[1] === 'html') {
                 template = template.replace(attr[0], element.innerHTML);
             } else {
-                //template = template.replace(attr[0], element.getAttribute(attr[1]));
+                template = template.replace(attr[0], element.getAttribute(attr[1]));
             }
         }
 
